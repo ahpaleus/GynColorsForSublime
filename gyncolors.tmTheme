@@ -512,6 +512,39 @@
                 <string>#306b8f</string>
             </dict>
         </dict>
+        <dict>
+            <key>name</key>
+            <string>Mapping Key</string>
+            <key>scope</key>
+            <string>meta.mapping.key string, meta.object-literal.key</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ffcd8b</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Tag Punctuation</string>
+            <key>scope</key>
+            <string>punctuation.definition.tag</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#B7B7F7</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Pseudo-class / Pseudo-element</string>
+            <key>scope</key>
+            <string>entity.other.pseudo-class, entity.other.pseudo-element</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#c080d0</string>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>

@@ -244,6 +244,21 @@
 			"scope": "markup.changed, diff.changed",
 			"foreground": "#ffffcd",
 			"background": "#306b8f"
+		},
+		{
+			"name": "Mapping Key",
+			"scope": "meta.mapping.key string, meta.object-literal.key",
+			"foreground": "#ffcd8b"
+		},
+		{
+			"name": "Tag Punctuation",
+			"scope": "punctuation.definition.tag",
+			"foreground": "#B7B7F7"
+		},
+		{
+			"name": "Pseudo-class / Pseudo-element",
+			"scope": "entity.other.pseudo-class, entity.other.pseudo-element",
+			"foreground": "#c080d0"
 		}
 	]
 }
