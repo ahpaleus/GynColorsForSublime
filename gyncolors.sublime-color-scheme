@@ -2,10 +2,26 @@
 	"name": "GynColors",
 	"globals":
 	{
-		"background": "#463B75",
-		"foreground": "#9387C2",
-		"caret": "#2e2e37",
-		"selection": "#eeeeee",
+		"background": "#1b1b33",
+		"foreground": "#5ed378",
+		"caret": "#8b8bff",
+		"line_highlight": "#2e2e37",
+		"selection": "#4e4e8f",
+		"selection_foreground": "#eeeeee",
+		"find_highlight": "#cd8b60",
+		"find_highlight_foreground": "#303030",
+		"gutter": "#1b1b33",
+		"gutter_foreground": "#8b8bcd",
+		"minimap_border": "#3e3e75",
+		"accent": "#8b8bff",
+		"misspelling": "#ce4e4e",
+		"fold_marker": "#cfcfcd",
+		"brackets_foreground": "#cfbfad",
+		"brackets_options": "underline",
+		"bracket_contents_foreground": "#cfbfad",
+		"bracket_contents_options": "underline",
+		"tags_foreground": "#cfbfad",
+		"tags_options": "underline"
 	},
 	"rules":
 	[
@@ -15,14 +31,15 @@
 			"foreground": "#00ff00"
 		},
 		{
-			"name": "Keywords",
-			"scope": "keyword.control",
-			"foreground": "#c080d0"
+			"name": "Comment Punctuation",
+			"scope": "punctuation.definition.comment",
+			"foreground": "#00ff00"
 		},
 		{
-			"name": "Preprocessor",
-			"scope": "meta.preprocessor | keyword.control.import",
-			"foreground": "#409090"
+			"name": "Todo",
+			"scope": "comment.line.note.todo",
+			"foreground": "#303030",
+			"background": "#d0a060"
 		},
 		{
 			"name": "String",
@@ -30,20 +47,203 @@
 			"foreground": "#f0ad6d"
 		},
 		{
-			"name": "Numbers",
-			"scope": "storage.type | support.type",
-			"foreground": "#ff8bff"
+			"name": "String Punctuation",
+			"scope": "punctuation.definition.string",
+			"foreground": "#f0ad6d"
 		},
 		{
-			"name": "Numbers",
+			"name": "Escape Sequence",
+			"scope": "constant.character.escape",
+			"foreground": "#c080d0",
+			"background": "#404040"
+		},
+		{
+			"name": "Format Specifier",
+			"scope": "constant.other.placeholder, punctuation.section.interpolation",
+			"foreground": "#c080d0",
+			"background": "#404040"
+		},
+		{
+			"name": "Regular Expression",
+			"scope": "string.regexp",
+			"foreground": "#c080d0"
+		},
+		{
+			"name": "Constant",
+			"scope": "constant",
+			"foreground": "#ffcd8b"
+		},
+		{
+			"name": "Numeric",
 			"scope": "constant.numeric",
 			"foreground": "#f0ad6d"
 		},
 		{
-			"name": "Text and source",
-			"scope": "text | source",
-			"foreground": "#5ed378",
-			"background": "#1b1b33"
+			"name": "Named Constant",
+			"scope": "entity.name.constant",
+			"foreground": "#ffcd8b"
+		},
+		{
+			"name": "Support Constant",
+			"scope": "support.constant",
+			"foreground": "#ffcd8b"
+		},
+		{
+			"name": "Keyword",
+			"scope": "keyword",
+			"foreground": "#B7B7F7"
+		},
+		{
+			"name": "Operator",
+			"scope": "keyword.operator",
+			"foreground": "#c080d0"
+		},
+		{
+			"name": "Storage",
+			"scope": "storage",
+			"foreground": "#B7B7F7"
+		},
+		{
+			"name": "Storage Type",
+			"scope": "storage.type",
+			"foreground": "#ff8bff"
+		},
+		{
+			"name": "Function Definition",
+			"scope": "entity.name.function",
+			"foreground": "#ff8bff"
+		},
+		{
+			"name": "Function Call",
+			"scope": "variable.function",
+			"foreground": "#ff8bff"
+		},
+		{
+			"name": "Support Function/Class/Type",
+			"scope": "support.function, support.class, support.type",
+			"foreground": "#ff8bff"
+		},
+		{
+			"name": "Class/Type Definition",
+			"scope": "entity.name.class, entity.name.type, entity.name.struct, entity.name.enum, entity.name.interface, entity.name.trait",
+			"foreground": "#ff8bff"
+		},
+		{
+			"name": "Inherited Class",
+			"scope": "entity.other.inherited-class",
+			"foreground": "#ff8bff",
+			"font_style": "italic"
+		},
+		{
+			"name": "Tag Name",
+			"scope": "entity.name.tag",
+			"foreground": "#B7B7F7"
+		},
+		{
+			"name": "Tag Attribute",
+			"scope": "entity.other.attribute-name",
+			"foreground": "#ffcd8b"
+		},
+		{
+			"name": "Section Name",
+			"scope": "entity.name.section",
+			"foreground": "#af4f4b"
+		},
+		{
+			"name": "Language Variable",
+			"scope": "variable.language",
+			"foreground": "#B7B7F7",
+			"font_style": "italic"
+		},
+		{
+			"name": "Function Parameter",
+			"scope": "variable.parameter",
+			"foreground": "#cfbfad"
+		},
+		{
+			"name": "Annotation / Decorator",
+			"scope": "variable.annotation, meta.annotation, punctuation.definition.annotation",
+			"foreground": "#409090"
+		},
+		{
+			"name": "Preprocessor / Import",
+			"scope": "meta.preprocessor, keyword.control.import, keyword.import, keyword.other.import",
+			"foreground": "#409090"
+		},
+		{
+			"name": "Invalid",
+			"scope": "invalid",
+			"foreground": "#ffffff",
+			"background": "#6e2e2e"
+		},
+		{
+			"name": "Invalid Deprecated",
+			"scope": "invalid.deprecated",
+			"foreground": "#ffffff",
+			"background": "#6e4e2e"
+		},
+		{
+			"name": "Markup Heading",
+			"scope": "markup.heading, punctuation.definition.heading",
+			"foreground": "#af4f4b",
+			"font_style": "bold"
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"foreground": "#ffcd8b",
+			"font_style": "bold"
+		},
+		{
+			"name": "Markup Italic",
+			"scope": "markup.italic",
+			"foreground": "#ffcd8b",
+			"font_style": "italic"
+		},
+		{
+			"name": "Markup Link",
+			"scope": "markup.underline.link",
+			"foreground": "#df9f2d"
+		},
+		{
+			"name": "Markup Raw / Code",
+			"scope": "markup.raw",
+			"foreground": "#f0ad6d"
+		},
+		{
+			"name": "Markup List Punctuation",
+			"scope": "markup.list punctuation.definition.list_item",
+			"foreground": "#B7B7F7"
+		},
+		{
+			"name": "Markup Quote",
+			"scope": "markup.quote",
+			"foreground": "#8b8bcd",
+			"font_style": "italic"
+		},
+		{
+			"name": "Diff Header",
+			"scope": "meta.diff.header, meta.diff.index",
+			"foreground": "#B7B7F7",
+			"font_style": "bold"
+		},
+		{
+			"name": "Diff Inserted",
+			"scope": "markup.inserted, diff.inserted",
+			"foreground": "#ffffcd",
+			"background": "#306d30"
+		},
+		{
+			"name": "Diff Deleted",
+			"scope": "markup.deleted, diff.deleted",
+			"foreground": "#ffffcd",
+			"background": "#6d3030"
+		},
+		{
+			"name": "Diff Changed",
+			"scope": "markup.changed, diff.changed",
+			"foreground": "#ffffcd",
+			"background": "#306b8f"
 		}
 	]
 }

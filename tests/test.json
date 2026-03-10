@@ -1,0 +1,57 @@
+{
+    "name": "GynColors",
+    "version": "2.0.0",
+    "description": "Sublime Text color scheme matching Gynvael Coldwind's vim colors",
+    "author": {
+        "name": "pawlos",
+        "url": "https://github.com/pawlos"
+    },
+    "license": "MIT",
+    "config": {
+        "debug": true,
+        "verbose": false,
+        "maxRetries": 5,
+        "timeout": 30.5,
+        "port": 8080,
+        "nullable": null
+    },
+    "colors": {
+        "background": "#1b1b33",
+        "foreground": "#5ed378",
+        "comment": "#00ff00",
+        "keyword": "#B7B7F7",
+        "operator": "#c080d0",
+        "type": "#ff8bff",
+        "string": "#f0ad6d",
+        "constant": "#ffcd8b",
+        "preprocessor": "#409090"
+    },
+    "features": [
+        "syntax-highlighting",
+        "bracket-matching",
+        "diff-support",
+        "markup-support"
+    ],
+    "numbers": {
+        "integer": 42,
+        "negative": -17,
+        "float": 3.14,
+        "scientific": 1.0e-7,
+        "zero": 0,
+        "large": 1000000
+    },
+    "nested": {
+        "level1": {
+            "level2": {
+                "level3": {
+                    "value": "deep nesting"
+                }
+            }
+        }
+    },
+    "escaped": "line1\nline2\ttab\\backslash\"quotes\"",
+    "unicode": "Hello \u0057\u006F\u0072\u006C\u0064",
+    "empty_string": "",
+    "empty_array": [],
+    "empty_object": {}
+}

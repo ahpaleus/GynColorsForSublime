@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GynColors Theme Test</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+            background-color: #1b1b33;
+            color: #5ed378;
+            margin: 0;
+            padding: 20px;
+        }
+        .highlight {
+            color: #ff8bff;
+            font-weight: bold;
+        }
+        #main-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #df9f2d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Comment: should be bright green -->
+    <header id="top" class="site-header" role="banner">
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="https://example.com" target="_blank" rel="noopener">External</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article>
+            <h1>Theme Test Page</h1>
+            <p class="intro">This is a <strong>bold</strong> and <em>italic</em> paragraph.</p>
+            <p>Special characters: &amp; &lt; &gt; &quot; &apos;</p>
+
+            <section id="section1" data-index="1">
+                <h2>Form Elements</h2>
+                <form action="/submit" method="post" enctype="multipart/form-data">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required
+                           placeholder="Enter name" maxlength="50" autofocus>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" pattern="[^@]+@[^@]+">
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="0" max="150" value="25">
+
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+
+                    <select name="role" id="role">
+                        <option value="">Choose...</option>
+                        <option value="admin" selected>Admin</option>
+                        <option value="user" disabled>User</option>
+                    </select>
+
+                    <button type="submit" class="btn primary">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </section>
+
+            <section id="section2">
+                <h2>Media and Embeds</h2>
+                <img src="photo.jpg" alt="A photo" width="300" height="200" loading="lazy">
+                <video controls width="640" height="360" poster="thumb.jpg">
+                    <source src="video.mp4" type="video/mp4">
+                    <source src="video.webm" type="video/webm">
+                    <track kind="subtitles" src="subs.vtt" srclang="en" label="English">
+                </video>
+                <iframe src="https://example.com" width="100%" height="400"
+                        sandbox="allow-scripts" loading="lazy"></iframe>
+            </section>
+
+            <section>
+                <h2>Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Item 1</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Item 2</td>
+                            <td>200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GynColors Theme Test</p>
+    </footer>
+
+    <script src="test.js" type="module" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const items = document.querySelectorAll("li");
+            items.forEach((item, index) => {
+                item.dataset.order = index;
+            });
+        });
+    </script>
+</body>
+</html>
